@@ -1,0 +1,17 @@
+# Return Codes
+
+0 = Success
+1-255 = Non-Successful
+
+$? = Return Code of Previous Command
+
+cat file.txt 
+
+if [ $? -eq 0 ]
+then
+  echo "The script ran ok"
+  exit 0
+else
+  echo "The script failed" >&2
+  exit 1
+fi

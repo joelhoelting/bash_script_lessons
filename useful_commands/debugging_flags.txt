@@ -1,0 +1,24 @@
+# Print Debugging
+
+#!/bin/bash -x
+
+--or--
+
+test_var='test'
+set -x
+echo $test_var
+set +x
+hostname
+
+# Error Debugging (Causes script to exit immediately if command exits with non-zero)
+#!/bin/bash -e
+
+file_name='/not/here'
+ls $file_name
+
+# Print shell commands before substitutions and expansions
+#!/bin/bash -v
+
+test_var='test'
+
+echo $test_var

@@ -1,0 +1,14 @@
+# Argument Testing
+
+$@ - Every supplied argument
+
+for ARGUMENT in $@
+do
+  echo "$ARGUMENT"
+done
+
+$# - Number of arguments
+
+if [ "$#" -ne 1 ]; then
+    echo "Illegal number of parameters"
+fi
